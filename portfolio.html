@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6565e8edc1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="portfolio.css">
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content global-width col-1">
+            <div class="nav-content-left">
+                <a class="active" href="http://127.0.0.1:5502/kkk.html">Home</a>
+                <a href="http://127.0.0.1:5500/service.html">Services</a>
+                <a href="">Projects</a>
+            </div>
+            <aside class="nav-content-right">
+                <a href="http://127.0.0.1:5503/portfolio.html">Contact</a>
+            </aside>
+        </div>
+    </nav>
+    <form>
+        <div class="bigpage">
+            <div class="SUBPAGE global-width">
+                <aside class="pic">
+                    <img src="new/what.png" />
+
+                </aside>
+                <aside class="form">
+
+                    <h4 class="here"></h4>
+                    <diV class="not">
+                        <h3>Please Hire Me!</h3>
+                    </diV>
+                    <div class="form12">
+                        <input type="text" name="fullname" placeholder="Fullname" id="fname" required/><br><br>
+                        <br><input type="email" name="email" placeholder="email" id="email1" required/><br>
+                        <br>
+                        <BR>
+                        <input type="tel" name="phonenumber" id="phone2" placeholder="Phone number" required/><br>
+                        <br>
+                        <br><textarea input type="text" name="brief_description" placeholder="Brief Description of tasks" id="brief_description" required></textarea><br>
+                        <br>
+                        <button class="gone">Book an appointment</button>
+                    </div>
+
+
+                </aside>
+            </div>
+        </div>
+    </form>
+    <footer>
+        <div class="footer1">
+            <div class="footer2 global-width">
+                <aside>
+                    <div class="about1">
+                        <h3>About Yourself</h3>
+                        <div class="sentence">
+                            <p>Contrary to popular belief is the, Lorem Ipsum is <br>not simply rand-om text. It has roots in a piece of work done.</p>
+
+                        </div>
+                    </div>
+
+                </aside>
+
+                <aside>
+                    <div class="contact1">
+                        <h3>Contact Us</h3>
+                        <p>Your Name here <br>Telephone: +233 20 546 5432 <br>first.surname@amalitech.com</p>
+                    </div>
+                </aside>
+            </div>
+            <br>
+
+            <div class="footer3">
+                <p>2022 Hillary Owusu. All rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const header = document.querySelector(".here")
+    const email = document.querySelector("#email1")
+    const phone = document.querySelector("#phone2")
+    const description = document.querySelector("brief_description")
+    const submit = document.querySelector(".gone")
+    submit.addEventListener("click", () => {
+        if (!email.value || !phone.value || !description.value) {
+            header.textContent = "sorry all fields required!"
+            header.style.visibility = "visible";
+            setTimeout(() => {
+                header.style.visibility = "hidden";
+                header.textContent = ""
+            }, 5000);
+        }
+
+        console.log(1)
+    })
+</script>
+
+
+</html>
